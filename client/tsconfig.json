@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+        "outDir": "./build", // 输出目录 tsc
+        "sourceMap": true, // 是否生成sourcemap文件
+        "noImplicitAny": true, // 是否不予许出现隐含的any
+        "module": "commonjs", // 模块化规范，要不所有的模块编译成什么模块
+        "target": "es5", // 编译的目标是ES5
+        "jsx": "react", // 如何编译JSX语法
+        "esModuleInterop": true, // 允许在common.js模块 和 es module进行转换
+        "baseUrl": ".", // 查找非相对路径模块的起始位置
+        "paths": {
+            "@/*": ["./src/*"] // src是相对于baseUrl的
+        }
+    },
+    "include": [
+        "./src/**/*" // 只编译src目录下面的ts文件
+    ]
+}

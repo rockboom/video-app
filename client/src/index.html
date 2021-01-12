@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>课堂</title>
+</head>
+<body>
+    <script>
+        (function (){
+            function refreshRem(){
+                // 设置根元素的大小
+                // 如果说屏幕宽度是750px的话，1rem = 100px iPhone6的话325px 1rem = 50px
+                // 16px 是Chrome的默认值 因为16不好算，所有改成100 100px容易计算
+                document.documentElement.style.fontSize = document.documentElement.clientWidth/750 * 100 + 'px';
+            }
+            refreshRem();
+            window.addEventListener('resize',refreshRem,false)
+        })()
+    </script>
+    <div id="root"></div>
+</body>
+</html>
